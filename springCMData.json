@@ -1,15 +1,15 @@
 { "userDocuments":	[
-	{"type":"Folder", "name":"Sub Folder", "description":"Sub Folder Description", "modifiedDate":"1/21/2014 2:56 PM"},
-	{"type":"Folder", "name":"Test 2", "description":"","modifiedDate":"1/21/2014 2:54 PM"},
-	{"type":"Folder", "name":"Test", "description":"","modifiedDate":"1/21/2014 2:53 PM"},
-	{"type":"Folder", "name":"New Folder", "description":"","modifiedDate":"1/21/2014 2:53 PM"},
-	{"type":"Document", "name":"Send Documents Usability.docx","description":"Document Description", "modifiedDate":"1/21/2014 3:55 PM"},
-	{"type":"Document", "name":"Star Image.png", "description":"","modifiedDate":"1/21/2014 3:45 PM"},
-	{"type":"Document", "name":"Coming Soon Text for Login Page.docx","description":"", "modifiedDate":"1/21/2014 3:15 PM"},{"type":"Document", "name":"Internationalization_Notes.pdf",
-	"description":"", "modifiedDate":"1/21/2014 2:58 PM"},
-	{"type":"Document", "name":"Test Document.docx", "description":"This is a test document", "modifiedDate":"1/21/2014 2:55 PM"},
-	{"type":"Document", "name":"Spreadsheet.xlsx", "description":"","modifiedDate":"1/21/2014 2:35 PM"},
-	{"type":"Document", "name":"Moon Image.png", "description":"","modifiedDate":"1/21/2014 2:27 PM"},
-	{"type":"Document", "name":"Presentation Deck.ppt", "description":"","modifiedDate":"1/21/2014 1:37 PM"}
+		{"type":"Folder", "name":"Sub Folder", "description":"Sub Folder Description", "modifiedDate":"1/21/2014 2:56 PM"},
+		{"type":"Folder", "name":"Test 2", "description":"","modifiedDate":"1/21/2014 2:54 PM"},
+		{"type":"Folder", "name":"Test", "description":"","modifiedDate":"1/21/2014 2:53 PM"},
+		{"type":"Folder", "name":"New Folder", "description":"","modifiedDate":"1/21/2014 2:53 PM"},
+		{"type":"Document", "name":"Send Documents Usability.docx","description":"Document Description", "modifiedDate":"1/21/2014 3:55 PM"},
+		{"type":"Document", "name":"Star Image.png", "description":"","modifiedDate":"1/21/2014 3:45 PM"},
+		{"type":"Document", "name":"Coming Soon Text for Login Page.docx","description":"", "modifiedDate":"1/21/2014 3:15 PM"},{"type":"Document", "name":"Internationalization_Notes.pdf",
+		"description":"", "modifiedDate":"1/21/2014 2:58 PM"},
+		{"type":"Document", "name":"Test Document.docx", "description":"This is a test document", "modifiedDate":"1/21/2014 2:55 PM"},
+		{"type":"Document", "name":"Spreadsheet.xlsx", "description":"","modifiedDate":"1/21/2014 2:35 PM"},
+		{"type":"Document", "name":"Moon Image.png", "description":"","modifiedDate":"1/21/2014 2:27 PM"},
+		{"type":"Document", "name":"Presentation Deck.ppt", "description":"","modifiedDate":"1/21/2014 1:37 PM"}
 	]
 }

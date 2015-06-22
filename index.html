@@ -5,102 +5,62 @@
 	<title>SpringCM | Interface Exercise</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-	
+
 	<script type="text/javascript" src="bower_components/list.js/dist/list.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-	<script type="text/javascript" src="js/js.js"></script>
+	<script type="text/javascript" src="bower_components/lodash/lodash.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
 
 </head>
 
-<body ng-app>
-
-
-
-
-<div id="main-wrapper">
-	<div id="grid-wrapper">
-		<header>
-			<span class="bold type"><a href="javascript:void();">Type</a></span>
-			<span class="bold name"><a href="javascript:void();">Name</a></span>
-			<span class="bold description"><a href="javascript:void();">Description</a></span>
-			<span class="bold modifiedDate"><a href="javascript:void();">Modified</a></span>
-		</header>
-		<div id="scrollable-grid">
-  	 		<ul class="list"></ul>
-		</div>
-	</div><!-- end #grid-wrapper -->
-	<div id="drawer-wrapper">
-		<section id="action-drawer">action drawer</section>
+<body data-ng-app="DocumentsApp">
+	<div id="logo">
+		<img class="logo" src="img/logo.png"></img>
 	</div>
-</div><!-- end #main-wrapper -->
+	<div id="main-wrapper">
+		<div id="grid-wrapper">
+			<header>
+				<span class="bold type"><a href="javascript:void(0);">Type</a></span>
+				<span class="bold name"><a href="javascript:void(0);">Name</a></span>
+				<span class="bold description"><a href="javascript:void(0);">Description</a></span>
+				<span class="bold modifiedDate"><a href="javascript:void(0);">Modified</a></span>
+			</header>
+			<div id="scrollable-grid">
+	  	 		<ul class="list"></ul>
+			</div>
+		</div><!-- end #grid-wrapper -->
+		<div id="drawer-wrapper">
+			<section id="action-drawer">
 
-
+				<ul class="list"></ul>
+				
+				<div class="action_button"><a href="javascript:void(0)">Action</a></div>
+	  			<div class="action_button"><a href="javascript:void(0)">Action</a></div>
+	  			<div class="action_button"><a href="javascript:void(0)">Action</a></div>
+			</section>
+			<section id="action-drawer-toggle">Open</section>
+		</div>
+	</div><!-- end #main-wrapper -->
 	
 
 
-	{{843/12}}
+
+	
+		<div data-ng-controller="MainController as main">
+			<h3>{{message}}</h3>
+			<h3>{{data}}</h3>
+		</div>
 
 
-
-
-
-<script type="text/javascript">
-// (function() {
-
-
-var documentsXHR = new XMLHttpRequest();
-documentsXHR.onload = function(){
-	if( documentsXHR.status == 200){
-
-		var gridData = JSON.parse(documentsXHR.responseText).userDocuments;
-		
-		var headerTitles = {
-    		item: '<article><span class="type"></span><span class="name"></span><span class="description"></span><span class="modifiedDate"></span></article>'
-		};
-
-		var springCMData = new List('scrollable-grid', headerTitles, gridData);
-
-
-		console.log("AJAX:   springCMData Loaded successfully");
-
-	} else {
-		console.log("AJAX:   failed to load data from .json file");
-	}
-}
-
-documentsXHR.open('GET','springCMData.json',true);
-documentsXHR.send();
-
-
-var actions = [
-
-{"name":"Upload", 				"imageName":"upload"},
-{"name":"Create Folder", 		"imageName":"create_folder"},
-{"name":"Share", 				"imageName":"share"},
-{"name":"Cut", 					"imageName":"cut"},
-{"name":"Manage Attributes", 	"imageName":"tag"},
-{"name":"Copy", 				"imageName":"copy"},
-{"name":"Paste", 				"imageName":"paste"},
-{"name":"Search", 				"imageName":"search"},
-{"name":"Folder Settings", 		"imageName":"folder_settings"},
-{"name":"Send Email", 			"imageName":"send_email"}
-
-];
-
-
-
-
-
-
-
-
-
-// }());
-</script>
-
-
+	
+	
+	
+	<script type="text/javascript">
+	
+	</script>
+	
+	
 </body>
-
 </html>
 
 
