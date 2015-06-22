@@ -16,6 +16,10 @@
 <body data-ng-app="DocumentsApp">
 	<div id="logo">
 		<img class="logo" src="img/logo.png"></img>
+		<div id="status" data-ng-controller="MainController as main">
+			<h3>{{mustafa}}</h3>
+			<h3>{{data}}</h3>
+		</div>
 	</div>
 	<div id="main-wrapper">
 		<div id="grid-wrapper">
@@ -34,25 +38,14 @@
 
 				<ul class="list"></ul>
 				
+
 				<div class="action_button"><a href="javascript:void(0)">Action</a></div>
 	  			<div class="action_button"><a href="javascript:void(0)">Action</a></div>
 	  			<div class="action_button"><a href="javascript:void(0)">Action</a></div>
 			</section>
 			<section id="action-drawer-toggle">Open</section>
 		</div>
-	</div><!-- end #main-wrapper -->
-	
-
-
-
-	
-		<div data-ng-controller="MainController as main">
-			<h3>{{message}}</h3>
-			<h3>{{data}}</h3>
-		</div>
-
-
-	
+	</div><!-- end #main-wrapper -->	
 	
 	
 	<script type="text/javascript">

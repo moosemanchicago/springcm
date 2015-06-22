@@ -43,6 +43,13 @@ h1,h2,h3,h4,h5{
 #logo{
 	border-bottom:2px solid gray;
 }
+#logo .logo{
+	position: relative;
+	left: 15px;
+}
+#status{
+	float: right;
+}
 #main-wrapper #grid-wrapper header{
 	height: 25px;
 	position: fixed;
@@ -90,6 +97,10 @@ h1,h2,h3,h4,h5{
 #main-wrapper #grid-wrapper span.type{
 	display: inline-block;
 	width: 10%;
+}
+
+#main-wrapper span.type{
+	text-align: center;
 }
 
 #main-wrapper #grid-wrapper span.name{

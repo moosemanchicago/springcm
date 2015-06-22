@@ -1,15 +1,15 @@
 //"iffy" - IIFE
 	// (function() {
 	
-
-    angular.module("DocumentsApp", [])
-        .controller("MainController", ["$scope", MainController]);
+	var initiateAngular = function() {
+    	angular.module("DocumentsApp", [])
+        	.controller("MainController", ["$scope", MainController]);
 	
-	function MainController($scope, $http) {
-        $scope.message = "AngularJS is working";
-
+		function MainController($scope) {
+        	$scope.mustafa = "Mustafa R. Ishaq";
         
-    };
+    	};
+	}
 
 
     
@@ -26,7 +26,7 @@
 			if( documentsXHR.status == 200){
 				//access data from the JSON object property "userDocuments"
 				var gridData = JSON.parse(documentsXHR.responseText).userDocuments;
-				console.log(gridData);
+				//console.log(gridData);
 
 				var headerTitles = {
 		    		item: '<article><span class="type"></span><span class="name"></span><span class="description"></span><span 	class="modifiedDate"></span	></article>'
@@ -60,16 +60,20 @@
 
 				var actionData = JSON.parse(actionsXHR.responseText).actions;
 
-				console.log(_.forEach(actionData.name));
-				
+				var actionControls = '';
+
+				for(var x = 0; x < 3; x++){
+					actionControls += '<div class="action_button"><a href="javascript:void(0)"><img src="img/' + actionData[x].imageName + '.png" title="' + actionData[x].name + '"/></a></div>';
+				}
+
+				document.getElementById('action-drawer').innerHTML = actionControls;
 
 
+				// var actionTitles = {
+		  //   		item: '<article><span class="action_button name"></span><span class="action_button imageName"></span></article>'
+				// };
 
-				var actionTitles = {
-		    		item: '<article><span class="action_button name"></span><span class="action_button imageName"></span></article>'
-				};
-
-				var actionButtons = new List('action-drawer', actionTitles, actionData);
+				// var actionButtons = new List('action-drawer', actionTitles, actionData);
 
 
 				console.log("AJAX:   actionData Loaded successfully from .json file");
@@ -86,6 +90,7 @@
 
 
 	// functions!
+	initiateAngular();
 	fetchUserDocuments();
 	fetchUserActions();
 	
