@@ -2,7 +2,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="description" content="Interface Exercise - Mustafa Ishaq">
+	<meta name="keywords" content="HTML,CSS,Angular,AJAX,JavaScript">
+	<meta name="author" content="Mustafa Ishaq">
+
 	<title>SpringCM | Interface Exercise</title>
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
@@ -10,7 +15,7 @@
 
 </head>
 
-<body data-ng-app="DocumentsApp" data-ng-controller="MainController as main">
+<body data-ng-app="DocumentsApp" data-ng-controller="MainController">
 	<div id="logo">
 		<img class="logo" src="img/logo.png"></img>
 		<div id="status" >
@@ -40,10 +45,12 @@
 
 		</div><!-- end #grid-wrapper -->
 		<div id="drawer-wrapper">
-			<section id="action-drawer">
-				<div class="action_button"><a href="javascript:void(0)">Action</a></div>
-	  			<div class="action_button"><a href="javascript:void(0)">Action</a></div>
-	  			<div class="action_button"><a href="javascript:void(0)">Action</a></div>
+			<section id="action-drawer" ng-repeat="data in actionData">
+				<div class="action_button">
+					<a href="javascript:void(0)">{{actionData.name}}
+						<img src="http://www.w3schools.com/images/colorpicker.gif" title="{{actionData.name}}" />
+					</a>
+				</div>
 			</section>
 			<section id="action-drawer-toggle">Open</section>
 		</div>
