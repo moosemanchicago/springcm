@@ -12,6 +12,8 @@
 			var developer = {
 				firstName: "Mustafa",
 				lastName: "Ishaq",
+				email: "mustafa.ishaq@gmail.com",
+				alernateEmail: "moosecodes@gmail.com",
 				location: "Schaumburg",
 				relocation: "Willing to relocate.",
 				intro: "I am super excited to be on your team!"
@@ -28,6 +30,13 @@
 						description:"Description",
 						modifiedDate:"Modified"
 					}
+				},
+				links:{
+					springcm: "http://www.springcm.com",
+
+				},
+				images:{
+					logo:"img/logo.png"
 				}
 			}
 
@@ -74,9 +83,24 @@
 
 
     	};
-	}
+	}; // end initiateAngular();
+
 
 	// functions!
 	initiateAngular();
+
+
+	window.onload = function(){
+
+		var useActionDrawer = function(){
+			var drawer = document.getElementById('drawer-wrapper');
+
+			drawer.style.width = "400px";
+
+		};
+
+		document.getElementById('action-drawer-toggle').addEventListener('click', useActionDrawer);
+
+	}
 
 // }());

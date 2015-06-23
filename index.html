@@ -17,9 +17,11 @@
 
 <body data-ng-app="DocumentsApp" data-ng-controller="MainController">
 	<div id="logo">
-		<img class="logo" src="img/logo.png"></img>
+		<a href="{{applicationData.links.springcm}}" target="_blank">
+			<img class="logo" ng-src="{{applicationData.images.logo}}" title="Click here to visit SpringCM!" />
+		</a>
 		<div id="status" >
-			<span><a href="mailto:mustafa.ishaq@gmail.com" title="Click to Email Moose!" target="_blank">{{developer.firstName}} {{developer.lastName}}</a></span>
+			<span><a href="mailto:{{developer.email}}" title="Click to Email Moose!" target="_blank">{{developer.firstName}} {{developer.lastName}}</a></span>
 		</div>
 	</div>
 	<div id="main-wrapper">
@@ -65,10 +67,6 @@
 			<section id="action-drawer-toggle">Open</section>
 		</div>
 	</div><!-- end #main-wrapper -->	
-
-	<script type="text/javascript">
-	
-	</script>
 	
 	
 </body>

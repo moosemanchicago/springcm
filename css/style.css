@@ -8,10 +8,10 @@
 
 
 *{
-	margin: 0;
-	padding: 0;
-	font-size: 1em;
-	font-family: Tahoma, Geneva, sans-serif
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
 }
 
 /* HTML5 Shiv */
@@ -34,16 +34,21 @@ h1,h2,h3,h4,h5{
 	display: inline-block;
 }
 
+/*
+    nice little shadow on the top of the body
+    look near the bottom of the address bar to see it!
+*/
 body:before { 
   content: "";
+  height: 10px;
+  left: 0;
   position: fixed;
   top: -10px;
-  left: 0;
   width: 100%;
-  height: 10px;
   z-index: 100;
-  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
   -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  -ms-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
   box-shadow: 0px 0px 10px rgba(0,0,0,.8);
 }
 
@@ -57,9 +62,10 @@ body:before {
 	border-bottom:2px solid gray;
 }
 #logo .logo{
-	position: relative;
-	left: 15px;
+  left: 15px;
+  position: relative;
 }
+/* email me by clicking on my name! */
 #status{
   float: right;
   line-height: 49px;
@@ -67,23 +73,26 @@ body:before {
 }
 
 #status a{
-  text-decoration: none;
+  color: #28bdbe;
   font-weight: bold;
-  color: #D45757;
+  text-decoration: none;
 
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 
 #status a:hover{
+  color: rgb(234,137,35);
   font-weight: bold;
-  color: #FE0000;
 }
 
 #main-wrapper #grid-wrapper header{
-	position: fixed;
-	background: #fff;
-	border-bottom: 2px solid gray;
-	width: 90%;
+  background: #fff;
+  border-bottom: 2px solid gray;
+  position: fixed;
+  width: 90%;
   z-index: 10;
 }
 
@@ -93,27 +102,27 @@ body:before {
 }
 
 #grid-wrapper{
-	float: left;
-	overflow-y:scroll;
-	font-size: .7rem;
-	width: 90%;
+  float: left;
+  font-size: .7rem;
+  overflow-y:scroll;
+  width: 90%;
   border-bottom: 5px solid black;
 }
 #scrollable-grid{
-	height: 240px;
-	position: relative;
-  	top: 2.0rem;
-    overflow: hidden;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  top: 2.0rem;
 
 }
 #scrollable-grid .gridList{
-  list-style: none;
   height: 2.0rem;
   line-height: 2.0rem;
+  list-style: none;
 }
 #grid-wrapper header span{
-	font-weight: bold;
-	float: left;
+  float: left;
+  font-weight: bold;
 }
 #main-wrapper .inline-block{
 	display: inline-block;
@@ -123,13 +132,13 @@ body:before {
 #main-wrapper span{
   float: left;
   height: 2.0rem;
-	line-height: 2.0rem;
+  line-height: 2.0rem;
 }
 
 #main-wrapper span a{
-	font-size: 1em;
-	text-decoration: none;
-	color: rgb(234,137,35);
+  color: rgb(234,137,35);
+  font-size: 1em;
+  text-decoration: none;
 }
 
 #main-wrapper #grid-wrapper span.type{
@@ -157,11 +166,14 @@ body:before {
 }
 
 #main-wrapper #grid-wrapper article{
-	border-bottom:1px solid gray;
+  border-bottom:1px solid gray;
+  cursor: pointer;
   height: 2.0rem;
   line-height: 2.0rem;
-  cursor: pointer;
 
+  -moz-transition:.3s all;
+  -ms-transition:.3s all;
+  -webkit-transition:.3s all;
   transition:.3s all;
 }
 
@@ -171,81 +183,99 @@ body:before {
 }
 
 .header-text{
-	font-weight: bold;
-	font-size: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 #drawer-wrapper{
-	width: 10%;
-  height: 240px;
+  width: 10%;
+  background-color: white;
   border-bottom: 5px solid black;
   float: left;
+  height: 240px;
   overflow: hidden;
   position: absolute;
   right: 0;
   z-index: 20;
-  background-color: white;
 
-    transition: all .3s;
-    -webkit-transition: all .3s;
-    -ms-transition: all .3s;
-    -moz-transition: all .3s;
-  	transform: translateX(0);
-  	-webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -moz-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -moz-transition: all .3s;
+  -ms-transform: translateX(0);
+  -ms-transition: all .3s;
+  -webkit-transform: translateX(0);
+  -webkit-transition: all .3s;
+  transform: translateX(0);
+  transition: all .3s;
 }
 
 
 .action_button{
   display: inline-block;
+  margin: 1px;
   position: relative;
   width: 60px;
   z-index: 1;
-  margin: 1px;
 }
 
 .action_button:before{
-  display: block;
+  border-top: 2px solid rgb(234,137,35);
   content: "";
-  position: absolute;
+  display: block;
+  height: 0;
   left: 2px;
+  position: absolute;
   top: 0px;
   width: calc(100% + 2px);
-  height: 0;
-  border-top: 2px solid rgb(234,137,35);
   z-index: 999;
-  box-sizing: content-box;
-  -webkit-transform: scaleX(0);
+
+  -moz-transform: scaleX(0);
+  -moz-transition: all 0.2s ease-out 0.2s;
   -ms-transform: scaleX(0);
-  transform: scaleX(0);
+  -ms-transition: all 0.2s ease-out 0.2s;
+  -webkit-transform: scaleX(0);
   -webkit-transition: all 0.2s ease-out 0.2s;
-  transition: all 0.2s ease-out 0.2s;
+  box-sizing: content-box;
   transform-origin: left;
+  transform: scaleX(0);
+  transition: all 0.2s ease-out 0.2s;
 }
 .action_button:after{
-  display: block;
+  border-top: 2px solid rgb(234,137,35);
+  bottom: 0px;
   content: "";
+  display: block;
+  height: 0;
   position: absolute;
   right: -2px;
-  bottom: 0px;
   width: calc(100% + 2px);
-  height: 0;
-  border-top: 2px solid rgb(234,137,35);
   z-index: 999;
-  box-sizing: content-box;
-  -webkit-transform: scaleX(0);
+
+  -moz-transform-origin: right;
+  -moz-transform: scaleX(0);
+  -moz-transition: all 0.2s ease-out 0.2s;
+  -moz-transition: all 0.2s ease-out 0.2s;
+  -ms-transform-origin: right;
   -ms-transform: scaleX(0);
-  transform: scaleX(0);
+  -ms-transition: all 0.2s ease-out 0.2s;
+  -ms-transition: all 0.2s ease-out 0.2s;
+  -webkit-transform-origin: right;
+  -webkit-transform: scaleX(0);
   -webkit-transition: all 0.2s ease-out 0.2s;
-  transition: all 0.2s ease-out 0.2s;
+  -webkit-transition: all 0.2s ease-out 0.2s;
+  box-sizing: content-box;
   transform-origin: right;
+  transform: scaleX(0);
+  transition: all 0.2s ease-out 0.2s;
 }
 .action_button:hover:before, .action_button:hover:after{
-  -webkit-transform: scaleX(1);
+
+  -moz-transform: scaleX(1);
+  -moz-transition: all 0.2s ease-in;
   -ms-transform: scaleX(1);
-  transform: scaleX(1);
+  -ms-transition: all 0.2s ease-in;
+  -webkit-transform: scaleX(1);
   -webkit-transition: all 0.2s ease-in;
+  transform: scaleX(1);
   transition: all 0.2s ease-in;
 }
 .action_button > a{
@@ -258,56 +288,68 @@ body:before {
   color: #152f54;
   text-align: center;
   position: relative;
-  border: 2px solid #00538a;
+  border: 2px solid #28bdbe;
   line-height: 43px;
   vertical-align: middle;
   text-transform: capitalize;
   text-decoration: none;
+
   -webkit-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 .action_button:hover > a{
   color: rgb(234,137,35);
 }
 .action_button > a:before{
-  display: block;
-  content: "";
-  position: absolute;
-  left: -2px;
-  bottom: 0px;
-  width: 0;
-  height: calc(100% + 2px);
   border-left: 2px solid rgb(234,137,35);
+  bottom: 0px;
+  content: "";
+  display: block;
+  height: calc(100% + 2px);
+  left: -2px;
+  position: absolute;
+  width: 0;
   z-index: 999;
-  -webkit-transform: scaleY(0);
+
   -ms-transform: scaleY(0);
-  transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  -moz-transform: scaleY(0);
   -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
   transform-origin: bottom;
+  transform: scaleY(0);
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
 }
 .action_button > a:after{
-  display: block;
+  border-left: 2px solid rgb(234,137,35);
   content: "";
+  display: block;
+  height: calc(100% + 2px);
   position: absolute;
   right: -2px;
   top: 0px;
   width: 0;
-  height: calc(100% + 2px);
-  border-left: 2px solid rgb(234,137,35);
   z-index: 999;
-  -webkit-transform: scaleY(0);
+
   -ms-transform: scaleY(0);
-  transform: scaleY(0);
+  -webkit-transform: scaleY(0);
   -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
   transform-origin: top;
+  transform: scaleY(0);
+  transition: all 0.2s ease-in;
 }
 .action_button:hover > a:before, .action_button:hover > a:after{
-  -webkit-transform: scaleY(1);
+  
   -ms-transform: scaleY(1);
-  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
   -webkit-transition: all 0.2s ease-out 0.2s;
+  transform: scaleY(1);
   transition: all 0.2s ease-out 0.2s;
 }
 
@@ -316,9 +358,11 @@ body:before {
 }
 
 #action-drawer-toggle{
-	background:rgb(41,189,190);
-	color: white;
-	cursor: pointer;
-	height: 45px;
-	width: 100%;
+  background:rgb(41,189,190);
+  color: white;
+  cursor: pointer;
+  height: 45px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
 }
