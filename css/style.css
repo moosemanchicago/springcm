@@ -200,7 +200,7 @@ body:before {
 .action_button{
   display: inline-block;
   position: relative;
-  width: 100%;
+  width: 60px;
   z-index: 1;
   margin: 1px;
 }
