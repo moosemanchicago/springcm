@@ -1,0 +1,14 @@
+{
+	"developerInformation":	[
+		{"name":"Upload", 				"imageName":"upload"},
+		{"name":"Create Folder", 		"imageName":"create_folder"},
+		{"name":"Share", 				"imageName":"share"},
+		{"name":"Cut", 					"imageName":"cut"},
+		{"name":"Manage Attributes", 	"imageName":"tag"},
+		{"name":"Copy", 				"imageName":"copy"},
+		{"name":"Paste", 				"imageName":"paste"},
+		{"name":"Search", 				"imageName":"search"},
+		{"name":"Folder Settings", 		"imageName":"folder_settings"},
+		{"name":"Send Email", 			"imageName":"send_email"}
+	]
+}

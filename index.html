@@ -5,20 +5,16 @@
 	<title>SpringCM | Interface Exercise</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-
-	<script type="text/javascript" src="bower_components/list.js/dist/list.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-	<script type="text/javascript" src="bower_components/lodash/lodash.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 
 </head>
 
-<body data-ng-app="DocumentsApp">
+<body data-ng-app="DocumentsApp" data-ng-controller="MainController as main">
 	<div id="logo">
 		<img class="logo" src="img/logo.png"></img>
-		<div id="status" data-ng-controller="MainController as main">
-			<h3>{{mustafa}}</h3>
-			<h3>{{data}}</h3>
+		<div id="status" >
+			<h3>{{developer.firstName}} {{developer.lastName}}</h3>
 		</div>
 	</div>
 	<div id="main-wrapper">
@@ -29,16 +25,22 @@
 				<span class="bold description"><a href="javascript:void(0);">Description</a></span>
 				<span class="bold modifiedDate"><a href="javascript:void(0);">Modified</a></span>
 			</header>
+			
 			<div id="scrollable-grid">
-	  	 		<ul class="list"></ul>
+		  	 	<article ng-repeat="data in springCMData">
+		  	 		<li class="gridList">
+		  	 			<span class="type">{{data.type}}</span>
+		  	 			<span class="name">{{data.name}}</span>
+		  	 			<span class="description">{{data.description}}</span>
+		  	 			<span class="modifiedDate">{{data.modifiedDate}}</span>
+		  	 		</li>
+		  	 	</article>
+		  	 	
 			</div>
+
 		</div><!-- end #grid-wrapper -->
 		<div id="drawer-wrapper">
 			<section id="action-drawer">
-
-				<ul class="list"></ul>
-				
-
 				<div class="action_button"><a href="javascript:void(0)">Action</a></div>
 	  			<div class="action_button"><a href="javascript:void(0)">Action</a></div>
 	  			<div class="action_button"><a href="javascript:void(0)">Action</a></div>
@@ -46,8 +48,7 @@
 			<section id="action-drawer-toggle">Open</section>
 		</div>
 	</div><!-- end #main-wrapper -->	
-	
-	
+
 	<script type="text/javascript">
 	
 	</script>
