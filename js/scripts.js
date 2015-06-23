@@ -20,6 +20,20 @@
 			// bring developer into scope
 			$scope.developer = developer;
 
+			var applicationData = {
+				header:{ 
+					titles:{
+						type:"Type",
+						name:"Name",
+						description:"Description",
+						modifiedDate:"Modified"
+					}
+				}
+			}
+
+			// bring developer into scope
+			$scope.applicationData = applicationData;		
+
 
 
 			// error messages

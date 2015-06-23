@@ -25,10 +25,10 @@
 	<div id="main-wrapper">
 		<div id="grid-wrapper">
 			<header>
-				<span class="bold type"><a href="javascript:void(0);">Type</a></span>
-				<span class="bold name"><a href="javascript:void(0);">Name</a></span>
-				<span class="bold description"><a href="javascript:void(0);">Description</a></span>
-				<span class="bold modifiedDate"><a href="javascript:void(0);">Modified</a></span>
+				<span class="bold type"><a href="javascript:void(0);">{{applicationData.header.titles.type}}</a></span>
+				<span class="bold name"><a href="javascript:void(0);">{{applicationData.header.titles.name}}</a></span>
+				<span class="bold description"><a href="javascript:void(0);">{{applicationData.header.titles.description}}</a></span>
+				<span class="bold modifiedDate"><a href="javascript:void(0);">{{applicationData.header.titles.modifiedDate}}</a></span>
 			</header>
 			
 			<div id="scrollable-grid">
@@ -45,10 +45,10 @@
 
 		</div><!-- end #grid-wrapper -->
 		<div id="drawer-wrapper">
-			<section id="action-drawer" ng-repeat="data in actionData">
+			<section id="action-drawer">
 				<div class="action_button">
-					<a href="javascript:void(0)">{{actionData.name}}
-						<img src="http://www.w3schools.com/images/colorpicker.gif" title="{{actionData.name}}" />
+					<a href="javascript:void(0)">
+						<img src="#" title="{{actionData.name}}" />
 					</a>
 				</div>
 			</section>
