@@ -1,2 +1,2 @@
-## User interface using HTML, CSS, Javascript, AJAX, List.js
+## User interface using HTML, CSS, Javascript, Angular
 Copyright 2015 Mustafa Raza Ishaq
