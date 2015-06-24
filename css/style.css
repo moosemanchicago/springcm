@@ -192,6 +192,7 @@ body:before {
 
   background-color: white;
   border-bottom: 5px solid black;
+  border-left: 2px solid black;
   float: left;
   height: 240px;
   overflow: hidden;
@@ -222,14 +223,22 @@ body:before {
 .action_button{
   display: inline-block;
   float: left;
-  margin: 1px 3px;
+  margin: 0;
   position: relative;
   width: 60px;
   z-index: 1;
 }
 
+#drawer-wrapper.open .action_button{
+  margin: 1px 3px;
+}
+
 .action_button img{
   position: relative;top: 15px;
+}
+
+.action_button:hover img{
+  transform:scale(1.1);
 }
 
 .action_button:before{
