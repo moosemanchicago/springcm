@@ -92,7 +92,7 @@ body:before {
   background: #fff;
   border-bottom: 2px solid gray;
   position: fixed;
-  width: 90%;
+  width: 95%;
   z-index: 10;
 }
 
@@ -105,7 +105,7 @@ body:before {
   float: left;
   font-size: .7rem;
   overflow-y:scroll;
-  width: 90%;
+  width: 95%;
   border-bottom: 5px solid black;
 }
 #scrollable-grid{
@@ -210,17 +210,19 @@ body:before {
 }
 
 #drawer-wrapper.open{
-  width: 400px;
+  width: 275px;
+  background-color: rgb(41,189,190);
 }
 
 #drawer-wrapper.closed{
-  width: 10%;
+  width: 5%;
+    min-width: 65px;
 }
 
 .action_button{
   display: inline-block;
   float: left;
-  margin: 1px;
+  margin: 1px 3px;
   position: relative;
   width: 60px;
   z-index: 1;
@@ -231,7 +233,7 @@ body:before {
 }
 
 .action_button:before{
-  border-top: 2px solid rgb(234,137,35);
+  border-top: 3px solid rgb(234,137,35);
   content: "";
   display: block;
   height: 0;
@@ -253,7 +255,7 @@ body:before {
   transition: all 0.2s ease-out 0.2s;
 }
 .action_button:after{
-  border-top: 2px solid rgb(234,137,35);
+  border-top: 3px solid rgb(234,137,35);
   bottom: 0px;
   content: "";
   display: block;
@@ -292,6 +294,7 @@ body:before {
   transition: all 0.2s ease-in;
 }
 .action_button > a{
+  background: white;
   display: inline-block;
   font-family: 'Raleway',sans-serif;
   font-weight: 400;
@@ -316,7 +319,7 @@ body:before {
   color: rgb(234,137,35);
 }
 .action_button > a:before{
-  border-left: 2px solid rgb(234,137,35);
+  border-left: 3px solid rgb(234,137,35);
   bottom: 0px;
   content: "";
   display: block;
@@ -340,7 +343,7 @@ body:before {
   -moz-transition: all 0.2s ease-in;
 }
 .action_button > a:after{
-  border-left: 2px solid rgb(234,137,35);
+  border-left: 3px solid rgb(234,137,35);
   content: "";
   display: block;
   height: calc(100% + 2px);
@@ -369,14 +372,15 @@ body:before {
 .drawer-top{
   height: calc(100% + -40px);
   overflow: hidden;
+  rgb(41,189,190)
 }
 #action-drawer-toggle{
   background:rgb(41,189,190);
   bottom: 0;
   color: white;
   cursor: pointer;
-  height: 40px;
-  line-height: 40px;
+  height: 41px;
+  line-height: 41px;
   position: absolute;
   text-align: center;
   width: 100%;
