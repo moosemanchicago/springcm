@@ -111,7 +111,7 @@ body:before {
 #scrollable-grid{
   height: 240px;
   position: relative;
-  overflow: hidden;
+  overflow-y: scroll;
   top: 2.0rem;
 
 }
