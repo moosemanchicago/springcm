@@ -1,5 +1,5 @@
 //"iffy" - IIFE
-// (function() {
+(function() {
 	
 	var initiateAngular = function() {
 
@@ -111,4 +111,4 @@
 		document.getElementById('action-drawer-toggle').addEventListener('click', useActionDrawer);
 	}
 
-// }());
+}());
