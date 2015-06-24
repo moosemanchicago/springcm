@@ -94,13 +94,21 @@
 
 		var useActionDrawer = function(){
 			var drawer = document.getElementById('drawer-wrapper');
+			var toggle = document.getElementById('action-drawer-toggle');
 
-			drawer.style.width = "400px";
+			if (drawer.classList.contains("closed")){
+				drawer.classList.remove("closed");
+				drawer.classList.add("open");
+				toggle.innerHTML = "Close";
 
+			} else {
+				drawer.classList.remove("open");
+				drawer.classList.add("closed");
+				toggle.innerHTML = "Open";
+			}
 		};
 
 		document.getElementById('action-drawer-toggle').addEventListener('click', useActionDrawer);
-
 	}
 
 // }());

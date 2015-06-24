@@ -36,7 +36,8 @@
 			<div id="scrollable-grid">
 		  	 	<article ng-repeat="data in springCMData">
 		  	 		<li class="gridList">
-		  	 			<span class="type">{{data.type}}</span>
+		  	 			<span ng-if="data.type == 'Folder'" class="type"><img ng-src="img/folder.png" /></span>
+		  	 			<span ng-if="data.type == 'Document'" class="type"><img ng-src="img/document.png" /></span>
 		  	 			<span class="name">{{data.name}}</span>
 		  	 			<span class="description">{{data.description}}</span>
 		  	 			<span class="modifiedDate">{{data.modifiedDate}}</span>
@@ -46,25 +47,15 @@
 			</div>
 
 		</div><!-- end #grid-wrapper -->
-		<div id="drawer-wrapper">
-			<section id="action-drawer">
-				<div class="action_button">
-					<a href="javascript:void(0)">
-						<img src="#" title="{{actionData.name}}" />
-					</a>
-				</div>
-				<div class="action_button">
-					<a href="javascript:void(0)">
-						<img src="#" title="{{actionData.name}}" />
-					</a>
-				</div>
-				<div class="action_button">
-					<a href="javascript:void(0)">
-						<img src="#" title="{{actionData.name}}" />
-					</a>
-				</div>
-			</section>
-			<section id="action-drawer-toggle">Open</section>
+		<div id="drawer-wrapper" class="closed">
+			<section class="drawer-top">
+			<div class="action_button" ng-repeat="actions in userActions">
+				<a href="javascript:void(0)">
+					<img ng-src="img/{{actions.imageName}}.svg" title="{{actions.name}}" />
+				</a>
+			</div>
+		</section>
+		<section id="action-drawer-toggle" class="drawer-bottom">Open</section>
 		</div>
 	</div><!-- end #main-wrapper -->	
 	

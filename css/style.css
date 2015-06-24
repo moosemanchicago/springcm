@@ -120,6 +120,7 @@ body:before {
   line-height: 2.0rem;
   list-style: none;
 }
+
 #grid-wrapper header span{
   float: left;
   font-weight: bold;
@@ -188,7 +189,7 @@ body:before {
 }
 
 #drawer-wrapper{
-  width: 10%;
+
   background-color: white;
   border-bottom: 5px solid black;
   float: left;
@@ -208,13 +209,25 @@ body:before {
   transition: all .3s;
 }
 
+#drawer-wrapper.open{
+  width: 400px;
+}
+
+#drawer-wrapper.closed{
+  width: 10%;
+}
 
 .action_button{
   display: inline-block;
+  float: left;
   margin: 1px;
   position: relative;
   width: 60px;
   z-index: 1;
+}
+
+.action_button img{
+  position: relative;top: 15px;
 }
 
 .action_button:before{
@@ -345,7 +358,7 @@ body:before {
   transition: all 0.2s ease-in;
 }
 .action_button:hover > a:before, .action_button:hover > a:after{
-  
+
   -ms-transform: scaleY(1);
   -webkit-transform: scaleY(1);
   -webkit-transition: all 0.2s ease-out 0.2s;
@@ -353,16 +366,18 @@ body:before {
   transition: all 0.2s ease-out 0.2s;
 }
 
-#action-drawer .action_button.imageName{
-	display: none;
+.drawer-top{
+  height: calc(100% + -40px);
+  overflow: hidden;
 }
-
 #action-drawer-toggle{
   background:rgb(41,189,190);
+  bottom: 0;
   color: white;
   cursor: pointer;
-  height: 45px;
-  width: 100%;
-  bottom: 0;
+  height: 40px;
+  line-height: 40px;
   position: absolute;
+  text-align: center;
+  width: 100%;
 }
